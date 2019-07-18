@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lease App</title>
+</head>
+<body>
+    <main>
+        <form method="POST" action="https://request-inspector.glitch.me">
+            <section>
+                <label for="date">Received on</label><input type="text" id="date" name="date"> (date) <label
+                    for="time">at</label><input type="text" id="time" name="time"> (time)
+                <br><br>
+            </section>
+
+            <header>
+                <h2>Lease Application</h2>
+                <hr><br>
+            </header>
+
+            <section>
+                <label for="address">Property Address</label><input type="text" id="address" name="property-address">
+                <br>
+
+                <label for="move-date">Anticipated: Move-in Date: </label><input type="text" id="move-date" name="move-date">
+                <label for="rent">Monthly Rent: $</label><input type="text" id="rent" name="rent">
+                <label for="security-deposit">Security Deposit: $ </label><input type="text" id="security-deposit" name="security-deposit">
+                <br><br>
+            </section>
+
+            <section>
+                <p>Applicant was referred to Landlord by: </p>
+                <label for="agent">Real Estate Agent</label><input type="checkbox" id="agent" name="referral" value="real-estate-agent">
+                <input type="text" name="agent-name" placeholder="Real Estate Agent's Name" size="80">
+                <input type="text" name="agent-phone" placeholder="Real Estate Agent's Phone Number" size="80"><br>
+                <label for="newspaper">Newspaper</label><input type="checkbox" id="newspaper" name="referral" value="newspaper">
+                <label for="sign">Sign</label><input type="checkbox" id="sign" name="referral" value="sign">
+                <label for="internet">Internet</label><input type="checkbox" id="internet" name="referral" value="internet">
+                <label for="other">Other</label><input type="checkbox" id="other" name="referral" value="other">
+                <input type="text" name="referral other" placeholder="explain other">
+                <br><br>
+            </section>
+
+            <section>
+
+                <label for="applicant-name">Applicant's Name (first, middle, last) </label>
+                
+            </section>
+
+
+            <input type="submit">
+        </form>
+    </main>
+</body>
+</html>
