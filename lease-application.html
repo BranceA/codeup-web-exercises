@@ -32,7 +32,7 @@
                 <p>Applicant was referred to Landlord by: </p>
                 <label for="agent">Real Estate Agent</label><input type="checkbox" id="agent" name="referral" value="real-estate-agent">
                 <input type="text" name="agent-name" placeholder="Real Estate Agent's Name" size="80">
-                <input type="text" name="agent-phone" placeholder="Real Estate Agent's Phone Number" size="80"><br>
+                <input type="text" name="agent-phone" placeholder="Real Estate Agent's Phone Number" size="50"><br>
                 <label for="newspaper">Newspaper</label><input type="checkbox" id="newspaper" name="referral" value="newspaper">
                 <label for="sign">Sign</label><input type="checkbox" id="sign" name="referral" value="sign">
                 <label for="internet">Internet</label><input type="checkbox" id="internet" name="referral" value="internet">
@@ -44,7 +44,106 @@
             <section>
 
                 <label for="applicant-name">Applicant's Name (first, middle, last) </label><input type="text" id="applicant-name" name="applicant-name">
+                <br>
+                <div>
+                    Is there a co-applicant?
+                    <label for="yes-coapplicant">Yes</label><input type="checkbox" id="yes-coapplicant" name="coapplicant" value="true">
+                    <label for="no-coapplicant">No</label><input type="checkbox" id="no-coapplicant" name="coapplicant" value="false">
+                    <strong><em> If yes, co-applicant must submit a separate application.</em></strong>
+                    <br>
+                </div>
+                <label for="former-last-name">Applicant's former last name (maiden or married) </label><input
+                    type="text" id="former-last-name" name="former-last name" size="80">
+                <br>
+                <div>
+                    <label for="email">E-mail</label><input type="text" id="email" name="email" size="50">
+                    <label for="home-phone">Home Phone</label><input type="text" id="home-phone" name="home-phone" size="40">
+                </div>
+                <div>
+                    <label for="work-phone">Work Phone</label><input type="text" id="work-phone" name="work-phone" size="45">
+                    <label for="mobile-pager">Mobile/Pager</label><input type="text" id="mobile-pager" name="mobile-pager" size="45">
+                </div>
+                <div>
+                    <label for="ssn">Soc. Sec. No.</label><input type="password" id="ssn" name="ssn" size="35">
+                    <label for="driver-license">Driver License No.</label><input type="text" id="driver-license" name="driver-license" size="35">
+                    <label for="dl-state">in</label><input type="text" id="dl-state" name="dl-state" size="20">
+                    <em>(state)</em>
+                </div>
+                <div>
+                    <label for="dob">Date of Birth</label><input type="text" id="dob" name="dob" size="25">
+                    <label for="height">Height</label><input type="text" id="height" name="height" size="20">
+                    <label for="weight">Weight</label><input type="text" id="weight" name="weight" size="20">
+                    <label for="eye-color">Eye Color</label><input type="text" id="eye-color" name="eye-color" size="20">
+                </div>
+                <div>
+                    <label for="hair-color">Hair Color</label><input type="text" id="hair-color" name="hair-color" size="20">
+                    <label for="marital-status">Marital Status</label><input type="text" id="marital-status" name="marital-status" size="35">
+                    <label for="citizenship">Citizenship</label><input type="text" id="citizenship" name="citizenship" size="30">
+                    <em>(country)</em>
+                </div>
+                <hr>
+
                 
+            </section>
+            <section>
+                Emergency Contact:
+                <label for="emergency-contact-name">Name: </label><input type="text" id="emergency-contact-name" name="emergency-contact-name" size="80">
+                <br>
+                <label for="emergency-contact-address">Address: </label><input type="text" id="emergency-contact-address" name="emergency-contact-address" size="80">
+                <br>
+                <label for="emergency-contact-phone">Phone: </label><input type="text" id="emergency-contact-phone" name="emergency-contact-phone" size="40">
+                <label for="emergency-contact-email">E-mail: </label><input type="text" id="emergency-contact-email" name="emergency-contact-email" size="50">
+
+            </section>
+            <hr>
+
+            <section>
+                <p>Name all other persons who will occupy the Property: </p>
+                <div>
+                    <label for="occupant-1-name">Name: </label><input type="text" id="occupant-1-name" name="occupant-1-name" size="60">
+                    <label for="occupant-1-relationship">Relationship: </label><input type="text" id="occupant-1-relationship" name="occupant-1-relationship" size="35">
+                    <label for="occupant-1-age">Age: </label><input type="text" id="occupant-1-age" name="occupant-1-age" size="30">
+                </div>
+                <div>
+                    <label for="occupant-2-name">Name: </label><input type="text" id="occupant-2-name" name="occupant-2-name" size="60">
+                    <label for="occupant-2-relationship">Relationship: </label><input type="text" id="occupant-2-relationship" name="occupant-2-relationship" size="35">
+                    <label for="occupant-2-age">Age: </label><input type="text" id="occupant-2-age" name="occupant-2-age" size="30">
+                </div>
+                <div>
+                    <label for="occupant-3-name">Name: </label><input type="text" id="occupant-3-name" name="occupant-3-name" size="60">
+                    <label for="occupant-3-relationship">Relationship: </label><input type="text" id="occupant-3-relationship" name="occupant-3-relationship" size="35">
+                    <label for="occupant-3-age">Age: </label><input type="text" id="occupant-3-age" name="occupant-3-age" size="30">
+                </div>
+                <div>
+                    <label for="occupant-4-name">Name: </label><input type="text" id="occupant-4-name" name="occupant-4-name" size="60">
+                    <label for="occupant-4-relationship">Relationship: </label><input type="text" id="occupant-4-relationship" name="occupant-4-relationship" size="35">
+                    <label for="occupant-4-age">Age: </label><input type="text" id="occupant-4-age" name="occupant-4-age" size="30">
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <div>
+                    <label for="current-address">Applicant's Current Address: </label><input type="text" id="current-address" name="current-address" size="70">
+                    <label for="current-apt-number">Apt. No.</label><input type="text" id="current-apt-number" name="current-apt-number" size="20">
+                    <br>
+                    <input type="text" id="current-address-continued" name="current-address-continued" size="80"><label for="current-address-continued"><em>(city, state, zip)</em></label>
+                </div>
+                <div>
+                    <label for="landlord-name">Landlord's Name: </label><input type="text" id="landlord-name" name="landlord-name" size="65">
+                    <label for="landlord-email">E-mail: </label><input type="text" id="landlord-email" name="landlord-email" size="45">
+                </div>
+                <div>
+                    Phone:
+                    <label for="landlord-phone-day"><em>Day:</em></label><input type="text" id="landlord-phone-day" name="landlord-phone-day" size="30">
+                    <label for="landlord-phone-night"><em>Ni:</em></label><input type="text" id="landlord-phone-night" name="landlord-phone-night" size="30">
+                    <label for="landlord-phone-mobile"><em>Mb:</em></label><input type="text" id="landlord-phone-mobile" name="landlord-phone-mobile" size="30">
+                    <label for="landlord-phone-fax"><em>Fax:</em></label><input type="text" id="landlord-phone-fax" name="landlord-phone-fax" size="30">
+                </div>
+                <div>
+                    <label for="date-moved-in">Date Moved In: </label><input type="text" id="date-moved-in" name="date-moved-in" size="30">
+                    <label for="date-moved-in">Date Moved In: </label><input type="text" id="date-moved-in" name="date-moved-in" size="30">
+                </div>
             </section>
 
 
