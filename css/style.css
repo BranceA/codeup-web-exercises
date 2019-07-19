@@ -1,8 +1,49 @@
 .fancy-header {
-    color: purple;
+    color: darkgreen;
     text-decoration: underline;
+    text-align: center;
 }
 
 body {
-    background-color: darkcyan;
+    background-color: rgb(94, 50, 50, .2);
+    background-image: url("../img/paul-gilmore-T9tbDeWmCNo-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Comic Sans MS";
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: georgian;
+}
+
+table, td, tr, th {
+    border: 1px solid black;
+    font-size: large;
+    padding: 15px;
+}
+
+a:link {
+    font-size: 30px;
+    color: blue;
+}
+
+a:visited {
+    font-size: 30px;
+    color: black;
+}
+
+a:hover {
+    font-size: 80px;
+    color: chartreuse;
+}
+
+a:active {
+    font-size: 100px;
+    color: darkred;
+}
+
