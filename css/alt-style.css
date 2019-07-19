@@ -1,0 +1,52 @@
+.fancy-header {
+    text-align: center;
+    color: darkviolet;
+    text-decoration: underline;
+    font-family: fantasy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: darkviolet;
+    text-decoration: underline;
+    font-family: fantasy;
+}
+
+body {
+    background-color: peachpuff;
+}
+
+img {
+    transform: rotate(20deg);
+    opacity: .2;
+}
+
+img.upper-img {
+    padding-top: 50px;
+}
+
+img.lower-img {
+    padding-bottom: 50px;
+}
+
+img:hover {
+    transition: 2s ease;
+    opacity: 1;
+}
+
+table, th, td {
+    border: 1px solid red;
+    background-color: white;
+    font-family: fantasy;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    height: 50px;
+}
+
+th {
+    font-weight: 900;
+}
