@@ -1,0 +1,16 @@
+body {
+    margin: 0px;
+    color: white;
+}
+
+main {
+    background-color: black;
+    height: 1000px;
+    width: 300px;
+    margin: 30px;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
