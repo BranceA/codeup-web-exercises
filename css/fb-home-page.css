@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: rgb(62,92,154);
+    color: white;
+    height: 6em;
+    width: 100%;
+    margin: 0px;
+}
+
+.fb-header {
+    margin: 0px;
+    position: relative;
+    top: 1em;
+    left: 10em;
+}
+
+.log-in-form {
+    margin: 0px;
+    float: right;
+    float: top;
+}
+
+.forgot-account {
+    float: right;
+    float: bottom;
+}
+

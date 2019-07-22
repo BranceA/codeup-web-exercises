@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>The Facebooks</title>
-    <link rel="stylesheet" href="fb-home-page.html">
+    <link rel="stylesheet" href="css/fb-home-page.css">
 </head>
 <body>
 
     <header>
-        <h1>facebook</h1>
-        <form action="https://request-inspector.glitch.me" method="post">
-            <label for="email-or-phone">Email or Phone</label><input type="text" id="email-or-phone" name="email-or-phone">
+        <h1 class="fb-header">facebook</h1>
+        <form action="https://request-inspector.glitch.me" method="post" class="log-in-form">
+            <div>
+                <label for="email-or-phone">Email or Phone</label>
+                <input type="text" id="email-or-phone" name="email-or-phone">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+                <button type="button">Log In</button>
         </form>
+        <a href="" class="forgot-account">Forgot Account?</a>
     </header>
 
 </body>
