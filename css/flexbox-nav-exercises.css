@@ -1,0 +1,62 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    color: blue;
+}
+
+li>a {
+    margin: 1em;
+}
+
+.container {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.25em;
+    position: relative;
+}
+
+.container h3 {
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -29px 0 0 -60px;
+}
+
+
+.left-links {
+
+}
+
+.right-links {
+
+}
+
+li {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+}
+
+li h3 {
+    height: 100%;
+}
