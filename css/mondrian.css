@@ -2,7 +2,7 @@ div {
     height: 510px;
     width: 510px;
     border: 10px solid white;
-    box-shadow: 5px 5px 5px 5px lightgray;
+    box-shadow: 0 0 10px 2px gray;
     margin: auto;
     border-radius: 10px;
 }
