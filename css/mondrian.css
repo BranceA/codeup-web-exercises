@@ -1,0 +1,55 @@
+.grid {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+    background-color: black;
+    grid-gap: 5px;
+    z-index: -1;
+    border: 5px solid black;
+}
+
+.square-blue {
+    background-color: rgb(47,68,122);
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.big-red {
+    background-color: rgb(221,59,48);
+    grid-area: 1 / 3 / 4 / -1;
+}
+
+.left-yellow {
+    background-color: rgb(249,204,51);
+    grid-area: 3 / 1 / 6 / 3;
+}
+
+.square-white {
+    background-color: white;
+    grid-area: 6 / 1 / 8 / 3;
+}
+
+.little-red {
+    background-color: rgb(221,59,48);
+    grid-area: 8 / 1 / 9 / 3;
+}
+
+.tall-white {
+    background-color: white;
+    grid-area: 4 / 3 / 8 / 5;
+}
+
+.wide-white {
+    background-color: white;
+    grid-area: 4 / 5 / 6 / -1;
+}
+
+.right-yellow {
+    background-color: rgb(249,204,51);
+    grid-area: 6 / 5 / 8 / -1;
+}
+
+.long-blue {
+    background-color: rgb(47,68,122);
+    grid-area: 8 / 3 / -1 / -1;
+}
