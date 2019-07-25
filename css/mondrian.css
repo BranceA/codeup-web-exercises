@@ -1,3 +1,12 @@
+div {
+    height: 510px;
+    width: 510px;
+    border: 10px solid white;
+    box-shadow: 5px 5px 5px 5px lightgray;
+    margin: auto;
+    border-radius: 10px;
+}
+
 .grid {
     display: grid;
     height: 500px;
@@ -7,6 +16,7 @@
     grid-gap: 5px;
     z-index: -1;
     border: 5px solid black;
+    margin: auto;
 }
 
 .square-blue {

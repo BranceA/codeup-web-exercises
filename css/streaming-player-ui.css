@@ -30,7 +30,7 @@ ul {
 
 header {
     background: purple;
-    grid-area: 1 / 2 / -1 / 6;
+    grid-area: 1 / 2 / 2 / 5;
     /* TODO: define the grid area of header such that it takes up the first row and middle three columns */
 }
 
