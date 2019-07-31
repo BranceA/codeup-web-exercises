@@ -58,7 +58,7 @@
                     <a class="nav-link" role="tab" href="#pills-cheese" id="pill-cheese-tab" data-toggle="pill" aria-controls="pills-cheese" aria-selected="false"><span class="badge badge-secondary rounded-circle">2</span> Cheese and Sauce</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="badge badge-secondary rounded-circle">3</span> Toppings</a>
+                    <a class="nav-link" href="#pills-toppings" role="tab" id="pills-toppings-tab" data-toggle="pill" aria-controls="pills-toppings" aria-selected="false"><span class="badge badge-secondary rounded-circle">3</span> Toppings</a>
                 </li>
             </ul>
         </div>
@@ -136,6 +136,59 @@
                             <div class="text-right bg-light py-4">
                                 <button type="button" class="btn btn-primary">Previous Step <i class="fas fa-chevron-left"></i></button>
                                 <button type="button" class="btn btn-primary">Next Step <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card tab-pane fade" id="pills-toppings" role="tabpanel" aria-labelledby="pills-toppings-tab">
+                <div class="card-body m-0 p-0">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                            Choose Toppings
+                        </button>
+                        <form action="" method="post" id="toppings" name="toppings" class="list-group">
+                            <ul class="m-4 p-0">
+                                <li class="list-group-item list-group-item-action bg-light">Choose Meats</li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="beef" name="toppings" value="true">
+                                    <label for="beef">Beef</label>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="ham" name="toppings" value="true">
+                                    <label for="ham">Ham</label>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="philly-steak" name="toppings" value="true">
+                                    <label for="philly-steak">Philly Steak</label>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="bacon" name="toppings" disabled value="true" checked>
+                                    <label for="bacon">Bacon</label>
+                                </li>
+                            </ul>
+                            <ul class="m-4 p-0">
+                                <li class="list-group-item list-group-item-action bg-light">Choose Non-Meats</li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="green-peppers" name="toppings" value="true">
+                                    <label for="green-peppers">Green Peppers</label>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="mushrooms" name="toppings" value="true">
+                                    <label for="mushrooms">Mushrooms</label>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="onions" name="toppings" value="true">
+                                    <label for="onions">Onions</label>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <input type="checkbox" id="jalapeno" name="toppings" value="true">
+                                    <label for="jalapeno">Jalape&ntilde;o Peppers</label>
+                                </li>
+                            </ul>
+                            <div class="text-right bg-light py-4">
+                                <button type="button" class="btn btn-primary">Checkout <i class="fas fa-shopping-cart"></i></button>
                             </div>
                         </form>
                     </div>
