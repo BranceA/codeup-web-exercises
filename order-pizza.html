@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza World</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light my-3">
+        <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+            <ul class="navbar-nav px-2">
+                <li class="nav-item active px-2">
+                    <a href="" class="nav-link btn btn-light"> Pizza World </a>
+                </li>
+                <li class="nav-item active px-2">
+                    <a href="" class="nav-link btn btn-light"> Order online </a>
+                </li>
+                <li class="nav-item active px-2">
+                    <a href="" class="nav-link btn btn-light"> Menu </a>
+                </li>
+                <li class="px-2">
+                    <form action="" method="post" class="form-inline">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" id="email" placeholder="Zip code">
+                    </form>
+                </li>
+                <li class="px-2">
+                    <button type="button" class="btn btn-light"> Search stores near you! </button>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <button type="button" class="btn btn-light"><i class="fas fa-user"></i> Sign-up</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron-fluid d-none d-md-block">
+            <div class="pizza-container">
+                <img src="img/pizza.png" alt="pizza" class="pizza">
+                <h2 class="welcome">Wecome to Pizza World!</h2>
+            </div>
+        </div>
+        <div>
+            <h2 style="color: gray" class="my-4">Build your own Pizza!</h2>
+            <hr class="my-3">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#crust-card"><span class="badge badge-secondary rounded-circle">1</span> Size and Crust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#topping-card"><span class="badge badge-secondary rounded-circle">2</span> Cheese and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><span class="badge badge-secondary rounded-circle">3</span> Toppings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content" id="myTabContent">
+            <div class="card tab-pane active" id="crust-card">
+                <div class="card-body m-0 p-0">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                            Choose size and Crust
+                        </button>
+                        <form action="" method="post" id="crust" name="crust" class="list-group">
+                            <ul class="m-4 p-0">
+                                <li class="list-group-item list-group-item-action bg-light">Hand Tossed</li>
+                                <li class="list-group-item list-group-item-action">Garlic seasoned crust with a rich buttery taste</li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="hts">
+                                    <label for="hts">Small (10")</label></li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="htm"> <label
+                                        for="htm">Medium (12")</label></li>
+                            </ul>
+                            <ul class="m-4 p-0">
+                                <li class="list-group-item list-group-item-action bg-light">Crispy Thin</li>
+                                <li class="list-group-item list-group-item-action">Thin enough for optimum crispy to crunchy ratio</li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="tcm">
+                                    <label for="tcm"> Medium (12")</label></li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="tcl">
+                                    <label for="tcl"> Large (14")</label></li>
+                            </ul>
+                            <div class="text-right bg-light py-4">
+                                <button type="button" class="btn btn-primary">Next Step <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card tab-pane" id="topping-card">
+                <div class="card-body m-0 p-0">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                            Choose Toppings
+                        </button>
+                        <form action="" method="post" id="toppings" name="crust" class="list-group">
+                            <ul class="m-4 p-0">
+                                <li class="list-group-item list-group-item-action bg-light">Choose Meats</li>
+                                <li class="list-group-item list-group-item-action">Garlic seasoned crust with a rich buttery taste</li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="hts">
+                                    <label for="hts">Small (10")</label></li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="htm"> <label
+                                        for="htm">Medium (12")</label></li>
+                            </ul>
+                            <ul class="m-4 p-0">
+                                <li class="list-group-item list-group-item-action bg-light">Crispy Thin</li>
+                                <li class="list-group-item list-group-item-action">Thin enough for optimum crispy to crunchy ratio</li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="tcm">
+                                    <label for="tcm"> Medium (12")</label></li>
+                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="tcl">
+                                    <label for="tcl"> Large (14")</label></li>
+                            </ul>
+                            <div class="text-right bg-light py-4">
+                                <button type="button" class="btn btn-primary">Next Step <i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
