@@ -50,12 +50,12 @@
         <div>
             <h2 style="color: gray" class="my-4">Build your own Pizza!</h2>
             <hr class="my-3">
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-pills" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#crust-card"><span class="badge badge-secondary rounded-circle">1</span> Size and Crust</a>
+                    <a class="nav-link active" role="tab" href="#pills-crust" id="pill-crust-tab" data-toggle="pill" aria-controls="pills-crust" aria-selected="true"><span class="badge badge-secondary rounded-circle">1</span> Size and Crust</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#topping-card"><span class="badge badge-secondary rounded-circle">2</span> Cheese and Sauce</a>
+                    <a class="nav-link" role="tab" href="#pills-cheese" id="pill-cheese-tab" data-toggle="pill" aria-controls="pills-cheese" aria-selected="false"><span class="badge badge-secondary rounded-circle">2</span> Cheese and Sauce</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span class="badge badge-secondary rounded-circle">3</span> Toppings</a>
@@ -63,7 +63,7 @@
             </ul>
         </div>
         <div class="tab-content" id="myTabContent">
-            <div class="card tab-pane active" id="crust-card">
+            <div class="card tab-pane fade show active" id="pills-crust" role="tabpanel" aria-labelledby="pills-crust-tab">
                 <div class="card-body m-0 p-0">
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action active">
@@ -94,30 +94,47 @@
                 </div>
             </div>
 
-            <div class="card tab-pane" id="topping-card">
+            <div class="card tab-pane fade" id="pills-cheese" role="tabpanel" aria-labelledby="pills-cheese-tab">
                 <div class="card-body m-0 p-0">
                     <div class="list-group">
                         <button type="button" class="list-group-item list-group-item-action active">
-                            Choose Toppings
+                            Choose Cheese and Sauce
                         </button>
-                        <form action="" method="post" id="toppings" name="crust" class="list-group">
+                        <form action="" method="post" id="cheese" name="cheese" class="list-group">
                             <ul class="m-4 p-0">
-                                <li class="list-group-item list-group-item-action bg-light">Choose Meats</li>
-                                <li class="list-group-item list-group-item-action">Garlic seasoned crust with a rich buttery taste</li>
-                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="hts">
-                                    <label for="hts">Small (10")</label></li>
-                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="htm"> <label
-                                        for="htm">Medium (12")</label></li>
+                                <li class="list-group-item list-group-item-action bg-light">Cheese</li>
+                                <li class="list-group-item list-group-item-action">How Much?</li>
+                                <li class="list-group-item list-group-item-action">
+                                    <select name="cheese-amount" id="cheese-amount" class="form-control">
+                                        <option value="light">Light</option>
+                                        <option value="normal" selected>Normal</option>
+                                        <option value="extra">Extra</option>
+                                        <option value="double">Double</option>
+                                    </select>
+                                </li>
                             </ul>
                             <ul class="m-4 p-0">
-                                <li class="list-group-item list-group-item-action bg-light">Crispy Thin</li>
-                                <li class="list-group-item list-group-item-action">Thin enough for optimum crispy to crunchy ratio</li>
-                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="tcm">
-                                    <label for="tcm"> Medium (12")</label></li>
-                                <li class="list-group-item list-group-item-action"><input type="radio" name="crust" id="tcl">
-                                    <label for="tcl"> Large (14")</label></li>
+                                <li class="list-group-item list-group-item-action bg-light">Sauce</li>
+                                <li class="list-group-item list-group-item-action">What Type?</li>
+                                <li class="list-group-item list-group-item-action">
+                                    <select name="sauce-type" id="sauce-type" class="form-control">
+                                        <option value="tomato">Tomato Sauce</option>
+                                        <option value="marinara" selected>Marinara Sauce</option>
+                                        <option value="bbq">BBQ Sauce</option>
+                                        <option value="alfredo">Alfredo Sauce</option>
+                                    </select>
+                                </li>
+                                <li class="list-group-item list-group-item-action">How Much?</li>
+                                <li class="list-group-item list-group-item-action">
+                                    <select name="sauce-amount" id="sauce-amount" class="form-control">
+                                        <option value="light">Light</option>
+                                        <option value="normal" selected>Normal</option>
+                                        <option value="extra">Extra</option>
+                                    </select>
+                                </li>
                             </ul>
                             <div class="text-right bg-light py-4">
+                                <button type="button" class="btn btn-primary">Previous Step <i class="fas fa-chevron-left"></i></button>
                                 <button type="button" class="btn btn-primary">Next Step <i class="fas fa-chevron-right"></i></button>
                             </div>
                         </form>
@@ -127,6 +144,8 @@
         </div>
     </div>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
