@@ -16,7 +16,7 @@ var brotherBearDaysRented = prompt("How many days would you like to rent Brother
 
 var herculesDaysRented = prompt("How many days would you like to rent Hercules?");
 
-alert("It costs $" + (parseInt(littleMermaidDaysRented) + parseInt(brotherBearDaysRented) + parseInt(herculesDaysRented)) + " to rent these movies.");
+alert("It costs $" + ((parseInt(littleMermaidDaysRented) * 3) + (parseInt(brotherBearDaysRented) * 3) + (parseInt(herculesDaysRented) * 3)) + " to rent these movies.");
 
 alert("We need to have a talk about the fact that you're working three jobs.")
 
