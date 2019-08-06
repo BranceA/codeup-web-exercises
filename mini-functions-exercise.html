@@ -23,7 +23,7 @@
 
     isFive();
 
-    var checkIfThisWordIsShort = prompt("Write a word.")
+    var checkIfThisWordIsShort = prompt("Write a word.");
     
     function isShortWord() {
         if (checkIfThisWordIsShort.length <= 5) {
@@ -36,9 +36,9 @@
 
     isShortWord();
 
-    var firstWordToCompare = prompt("Write a word.")
+    var firstWordToCompare = prompt("Write a word.");
     
-    var secondWordToCompare = prompt("Write another word.")
+    var secondWordToCompare = prompt("Write another word.");
     
     function isSameLength() {
         if (firstWordToCompare.length === secondWordToCompare.length) {
@@ -55,7 +55,7 @@
 
     function getSmallerSegment() {
         var numberOfCharacters = secondSegment.length;
-        var smallerSegment = (firstSegment.substring(0, numberOfCharacters))
+        var smallerSegment = (firstSegment.substring(0, numberOfCharacters));
         alert(smallerSegment.toLowerCase())
     }
 
