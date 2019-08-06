@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function mini exercises</title>
+</head>
+<body>
+
+
+<script>
+
+    "use strict";
+
+    var aNumber = prompt("Write a number");
+
+    function isFive() {
+        if (parseInt(aNumber) === 5) {
+            alert("This number is 5");
+        } else {
+            alert("This number is not 5")
+        }
+    }
+
+    isFive();
+
+    var checkIfThisWordIsShort = prompt("Write a word.")
+    
+    function isShortWord() {
+        if (checkIfThisWordIsShort.length <= 5) {
+            alert("That word is short.")
+        } else {
+            alert("That word isn't short.")
+        }
+        
+    }
+
+    isShortWord();
+
+    var firstWordToCompare = prompt("Write a word.")
+    
+    var secondWordToCompare = prompt("Write another word.")
+    
+    function isSameLength() {
+        if (firstWordToCompare.length === secondWordToCompare.length) {
+            alert("These words are the same length.")
+        } else {
+            alert("These words are different lengths")
+        }
+    }
+
+    isSameLength();
+
+    var firstSegment = "2EZ4RTZ";
+    var secondSegment = "what";
+
+    function getSmallerSegment() {
+        var numberOfCharacters = secondSegment.length;
+        var smallerSegment = (firstSegment.substring(0, numberOfCharacters))
+        alert(smallerSegment.toLowerCase())
+    }
+
+    getSmallerSegment();
+
+</script>
+</body>
+</html>
