@@ -93,9 +93,9 @@ var billTotal = prompt ("How much was your bill?");
 var tipPercentage = prompt("What percentage do you want to tip?");
 
 if (tipPercentage < 1) {
-    alert("You want to tip $" + calculateTip(tipPercentage, billTotal));
+    alert("You want to tip $" + (calculateTip(tipPercentage, billTotal).toFixed(2)));
 } else {
-    alert("You want to tip $" + calculateTip((tipPercentage/100), billTotal))
+    alert("You want to tip $" + (calculateTip((tipPercentage/100), billTotal).toFixed(2)))
 }
 
 /**
