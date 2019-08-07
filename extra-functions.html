@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Extra Functions</title>
+</head>
+<body>
+
+<script>
+
+    function isOdd (oddTestNumber) {
+        return (oddTestNumber % 2) === 1
+    }
+
+    function isEven (evenTestNumber) {
+        return (evenTestNumber % 2) === 0
+    }
+
+    function identify(input) {
+        return typeof(input)
+    }
+
+    function isFive(input) {
+        return (input === 5 || input === "5")
+    }
+
+    function addFive(input) {
+        return (input + 5)
+    }
+
+    function isMultipleOfFive(input) {
+        return ((input % 5) === 0)
+    }
+
+    function isMultipleOfThreeAndFive(input) {
+        return(((input % 5) === 0) && ((input % 3) === 0))
+    }
+    
+    function isMultipleOf(target, n) {
+        return ((target % n) === 0)
+    }
+
+    function isTrue(input) {
+        return input === true
+    }
+
+    function isFalse(input) {
+        return input === false
+    }
+
+    function isTruthy(input) {
+        return (!!input !== false)
+    }
+
+    function isFalsy(input) {
+        return (!!input === false)
+    }
+
+    function isVowel(input) {
+        var listOfVowels = "aAeEiIoOuU";
+        return listOfVowels.indexOf(input) !== -1;
+    }
+
+    function isConsonant(input) {
+        var listOfVowels = "aAeEiIoOuU";
+        return listOfVowels.indexOf(input) === -1;
+    }
+
+    function isCapital(input) {
+        return input !== input.toLowerCase();
+    }
+
+    function isLowerCase(input) {
+        return input === input.toLowerCase();
+    }
+
+    function hasLowerCase(input) {
+        return input !== input.toUpperCase();
+    }
+
+    function isSpace(input) {
+        return input === " "
+    }
+
+    function isZero(input) {
+        return input === 0
+    }
+
+    function isNotZero(input) {
+        return input !== 0
+    }
+
+    function lowerCase(input) {
+        return input.toLowerCase()
+    }
+
+    function double(input) {
+        return (input * 2)
+    }
+
+    function triple(input) {
+        return (input * 3)
+    }
+
+    function quadruple(input) {
+        return (input * 4)
+    }
+
+    function half(input) {
+        return (input / 2)
+    }
+
+    function subtract(a, b) {
+        return (a - b)
+    }
+
+    function multiply(a, b) {
+        return (a * b)
+    }
+
+    function multiply(a, b) {
+        return (a * b)
+    }
+
+    function divide(a, b) {
+        return (a / b)
+    }
+
+    function remainder(a, b) {
+        return (a % b)
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
