@@ -7,29 +7,28 @@
 <body>
 
 
-<form action="POST">
+
     <label for="shopping">Has the shopping been done?</label>
-    <input type="checkbox" id="shopping">
-</form>
+    <input type="checkbox" id="shopping" onclick="changeText();">
+
 <br>
 <p id="child-wages">Child has earned $5 this week</p>
 
+
 <script>
-    function check() {
-        document.getElementById("shopping").checked = true;
-    }
 
-    function uncheck() {
-        document.getElementById("shopping").checked = false;
-    }
+    var checkBox = document.getElementById("shopping");
 
-    // console.log(check());
-
+    var text = document.getElementById.innerH("child-wages");
+    
     function changeText() {
-        while (shopping.checked === true) {
-            document.getElementById("child-wages").innerHTML = "New text!";
+        if (document.getElementById('shopping').checked) {
+            text.replace("$5", "$10");
+
         }
+        
     }
+
 </script>
 </body>
 </html>
