@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Child Labor</title>
+</head>
+<body>
+
+
+<form action="POST">
+    <label for="shopping">Has the shopping been done?</label>
+    <input type="checkbox" id="shopping">
+</form>
+<br>
+<p id="child-wages">Child has earned $5 this week</p>
+
+<script>
+    function check() {
+        document.getElementById("shopping").checked = true;
+    }
+
+    function uncheck() {
+        document.getElementById("shopping").checked = false;
+    }
+
+    // console.log(check());
+
+    function changeText() {
+        while (shopping.checked === true) {
+            document.getElementById("child-wages").innerHTML = "New text!";
+        }
+    }
+</script>
+</body>
+</html>

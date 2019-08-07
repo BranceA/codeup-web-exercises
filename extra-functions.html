@@ -8,6 +8,7 @@
 
 <script>
 
+
     function isOdd (oddTestNumber) {
         return (oddTestNumber % 2) === 1
     }
@@ -35,7 +36,7 @@
     function isMultipleOfThreeAndFive(input) {
         return(((input % 5) === 0) && ((input % 3) === 0))
     }
-    
+
     function isMultipleOf(target, n) {
         return ((target % n) === 0)
     }
@@ -118,10 +119,6 @@
         return (a * b)
     }
 
-    function multiply(a, b) {
-        return (a * b)
-    }
-
     function divide(a, b) {
         return (a / b)
     }
@@ -130,7 +127,71 @@
         return (a % b)
     }
 
+    // instructions weird
+    function modulo(a, b) {
+        return (a % b)
+    }
 
+    function cube(n) {
+        return (n * n * n);
+    }
+
+    function squareRoot(n) {
+        return Math.sqrt(n);
+    }
+
+    function cubeRoot(n) {
+        return Math.cbrt(n);
+    }
+
+    function invertSign(n) {
+        return (n * -1)
+    }
+
+    function degreesToRadians(n) {
+        return (n * ((Math.PI) / 180))
+    }
+
+    function radiansToDegrees(n) {
+        return ((n * 180) / Math.PI)
+    }
+
+    function isBlank(input) {
+        var trimInput = input.trim();
+        return trimInput.length === 0;
+    }
+
+    function trim(input) {
+        return input.trim();
+    }
+
+    function areEqual(a, b) {
+        return (a == b);
+    }
+
+    function areIdentical(a, b) {
+        return (a === b);
+    }
+    
+    function not(input) {
+        return !input;
+    }
+
+    function notNot(input) {
+        return !!input;
+    }
+
+    function and(input1, input2) {
+        return input1 && input2;
+    }
+
+    function or(input1, input2) {
+        return input1 || input2;
+    }
+
+    function reverseString(input) {
+        input.split("").reverse().join("");
+    }
 
 
 </script>
