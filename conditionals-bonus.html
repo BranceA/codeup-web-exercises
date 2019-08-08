@@ -172,7 +172,16 @@
 
         if ((firstUnitOfMeasure.toLowerCase() === "inches") && (secondUnitOfMeasure.toLowerCase() === "feet")) {
             alert((firstUnitOfMeasureAmount / 12) + " feet");
-        } else if ((firstUnitOfMeasure.toLowerCase() === "feet") && )
+        } else if ((firstUnitOfMeasure.toLowerCase() === "feet") && (secondUnitOfMeasure.toLowerCase() === "inches")) {
+            alert((firstUnitOfMeasureAmount * 12) + " inches");
+        } else if ((firstUnitOfMeasure.toLowerCase() === "feet") && (secondUnitOfMeasure.toLowerCase() === "miles")) {
+            alert((firstUnitOfMeasureAmount / 5280) + " miles");
+        } else if ((firstUnitOfMeasure.toLowerCase() === "miles") && (secondUnitOfMeasure.toLowerCase() === "feet")) {
+            alert((firstUnitOfMeasureAmount * 5280) + " feet");
+        } else if ((firstUnitOfMeasure.toLowerCase() === "miles") && (secondUnitOfMeasure.toLowerCase() === "light years")) {
+            alert((firstUnitOfMeasureAmount / 5.879e+12) + " light years");
+        } else if ((firstUnitOfMeasure.toLowerCase() === "light years") && (secondUnitOfMeasure.toLowerCase() === "miles")) {
+            alert((firstUnitOfMeasureAmount * 5.879e+12) + " miles");
     }
 
     measurementConversion();
