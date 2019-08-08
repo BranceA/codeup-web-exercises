@@ -60,27 +60,27 @@ numberFacts();
  * console.logging the function's return value
  */
 
-function analyzeColor(colors) {
-    if (colors === "red") {
-        return "Roses are allegedly red."
-    } else if (colors === "orange") {
-        return "Oranges are allegedly orange."
-    } else if (colors === "yellow") {
-        return "My duck is allegedly yellow."
-    } else if (colors === "green") {
-        return "Grass is allegedly green."
-    } else if (colors === "blue") {
-        return "The sky is allegedly blue."
-    } else if (colors === "indigo") {
-        return "Plateaus are definitely Indigo."
-    } else if (colors === "violet") {
-        return "Violets are allegedly violet."
-    } else if (colors === "puce") {
-        return "Puce is allegedly a color."
-    } else {
-        return "I don't have any idea what that is."
-    }
-}
+// function analyzeColor(colors) {
+//     if (colors === "red") {
+//         return "Roses are allegedly red."
+//     } else if (colors === "orange") {
+//         return "Oranges are allegedly orange."
+//     } else if (colors === "yellow") {
+//         return "My duck is allegedly yellow."
+//     } else if (colors === "green") {
+//         return "Grass is allegedly green."
+//     } else if (colors === "blue") {
+//         return "The sky is allegedly blue."
+//     } else if (colors === "indigo") {
+//         return "Plateaus are definitely Indigo."
+//     } else if (colors === "violet") {
+//         return "Violets are allegedly violet."
+//     } else if (colors === "puce") {
+//         return "Puce is allegedly a color."
+//     } else {
+//         return "I don't have any idea what that is."
+//     }
+// }
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -95,7 +95,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message everytime you refresh the page
  */
 
-console.log(analyzeColor(randomColor));
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
@@ -103,10 +103,29 @@ console.log(analyzeColor(randomColor));
  */
 
 function analyseColorElectricBoogaloo(colors) {
-    switch () {
-        
+    switch (colors) {
+        case "red":
+            return ("Roses are allegedly red.");
+        case "orange":
+            return ("Oranges are allegedly orange.");
+        case "yellow":
+            return ("My duck is allegedly yellow.");
+        case "green":
+            return ("Grass is allegedly green.");
+        case "blue":
+            return ("The sky is allegedly blue.");
+        case "indigo":
+            return ("Plateaus are definitely Indigo.");
+        case "violet":
+            return ("Violets are allegedly violet.");
+        case "puce":
+            return ("Puce is allegedly a color.");
+        default:
+            return ("I don't have any idea what that is.");
     }
 }
+
+// console.log(analyseColorElectricBoogaloo(randomColor));
 
 /**
  * TODO:
@@ -114,6 +133,10 @@ function analyseColorElectricBoogaloo(colors) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+var colors = prompt("Name a color.");
+
+alert(analyseColorElectricBoogaloo(colors));
 
 /* ########################################################################## */
 
@@ -137,6 +160,12 @@ function analyseColorElectricBoogaloo(colors) {
  * return value.
  */
 
+function calculateTotal(number, price) {
+    var discountPercent = ((number * 10) / 100);
+    var discountAmount = (discountPercent * price);
+    return price - discountAmount;
+}
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -145,4 +174,10 @@ function analyseColorElectricBoogaloo(colors) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var billTotal = prompt("What is your total bill?");
+
+alert("Your lucky number is " + luckyNumber);
+
+alert("After discount, your price is: $" + calculateTotal(luckyNumber, billTotal));
