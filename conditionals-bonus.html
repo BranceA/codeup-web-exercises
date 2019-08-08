@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonuses</title>
+</head>
+<body>
+
+
+<script>
+    function makeJustinMessage(name) {
+        if (name === "justin") {
+            return "It's Justin."
+        } else if ((name.indexOf(1) !== -1) || (name.indexOf(2) !== -1) || (name.indexOf(3) !== -1) || (name.indexOf(4) !== -1) || (name.indexOf(5) !== -1) || (name.indexOf(6) !== -1) || (name.indexOf(7) !== -1) || (name.indexOf(8) !== -1) || (name.indexOf(9) !== -1) || (name.indexOf(0) !== -1) || (name.trim() !== name)) {
+            return "INVALID INPUT"
+        }
+        else {
+            return "It's not Justin."
+        }
+    }
+
+    function doIGo() {
+
+        var lightColor = prompt("What color is the traffic light?");
+
+        switch (lightColor.toLowerCase()) {
+            case "green":
+                return ("THE LIGHT IS GREEN!!! GO! GO! GO!");
+
+            case "yellow":
+                return ("YOU HAVE TIME!!! PEDAL TO THE METAL!!!");
+
+            case "red":
+                return ("The light is red. Do not go.");
+
+            case "puce":
+                return ("Can you take this seriously? Nobody actually knows what that color looks like.");
+
+            default:
+                alert("I don't think you're looking at a traffic light.");
+                break;
+        }
+    }
+
+    function returnInputFunction(input) {
+        if (input === undefined) {
+            return "No input provided"
+        } else {
+            return input
+        }
+    }
+
+    function messagesForNumbers(input) {
+        if (isNaN(input) === true) {
+                return "Invalid Input."
+        } else if (input.length > 1) {
+                return "Too many digits"
+        } else if (input == 1) {
+            return "This is the loneliest number."
+        } else if (input == 2) {
+            return "Just the two of us."
+        } else if (input == 3) {
+            return "Three's company."
+        } else if (input == 4) {
+            return "Four score and four years ago. Our Fourfathers foursaw this."
+        } else if (input == 5) {
+            return "High five, my dude!!"
+        } else if (input == 6) {
+            return "Don't concatenate 6 three times."
+        } else if (input == 7) {
+            return "Seven... up."
+        } else if (input == 8) {
+            return "Eight is great."
+        } else if (input == 9) {
+            return "Nine nine bust a rhyme."
+        } else if (input == 0) {
+            return "Rome may not have fallen if they figured out zero."
+        }
+    }
+
+    function favoriteDayMessages() {
+        var favoriteDay = prompt("What is your favorite day of the week?");
+
+        if ((favoriteDay.toLowerCase()).indexOf("mon") !== -1) {
+            alert("Monday? Are you sure?");
+        } else if ((favoriteDay.toLowerCase()).indexOf("tue") !== -1) {
+            alert("I get that. You get to leave an hour early.");
+        } else if ((favoriteDay.toLowerCase()).indexOf("wed") !== -1) {
+            alert("Something something hump day something.");
+        } else if ((favoriteDay.toLowerCase()).indexOf("thur") !== -1) {
+            alert("Heck yeah! Tech talk.");
+        } else if ((favoriteDay.toLowerCase()).indexOf("fri") !== -1) {
+            alert("Easy there Rebbecca Black");
+        } else if ((favoriteDay.toLowerCase()).indexOf("sat") !== -1) {
+            alert("In true Viking fashion, this is the only day I bathe.");
+        } else if ((favoriteDay.toLowerCase()).indexOf("sun") !== -1) {
+            alert("Sunday is the best day to recover from Saturday night.");
+        } else {
+            alert("Have you tried a day of the week from the modern calendar spelled in English?")
+        }
+    }
+
+
+    // favoriteDayMessages();
+
+    function isThisANumber(possibleNumber) {
+        (isNaN(possibleNumber) === false) ? alert("Congrats! This is a number") : alert("This is not a number. Sorry for your loss.");
+    }
+
+    function seasonalAlerts() {
+        var chosenSeason = prompt("Enter a season");
+        if (chosenSeason.toLowerCase() === "summer") {
+            alert("The astronomical months in summer are June, July and August.");
+            var summerMonth = prompt("Pick a summer month.");
+            if (summerMonth.toLowerCase() === "june") {
+                alert("I can't think of anything special about June.")
+            } else if (summerMonth.toLowerCase() === "july") {
+                alert("HAPPY BIRTHDAY MURICA!!!")
+            } else if (summerMonth.toLowerCase() === "august") {
+                alert("Named for Augustus Caesar... I think... I'm too busy to fact check.")
+            } else {
+                alert("I don't know how you messed up this simple task.")
+            }
+        } else if ((chosenSeason.toLowerCase() === "fall") || (chosenSeason.toLowerCase() === "autumn")) {
+            alert("The astronomical months in fall are September, October and November");
+            var fallMonth = prompt("Pick a fall month.");
+            if (fallMonth.toLowerCase() === "september") {
+                alert("Despite having the prefix for 7 in it's name, September is the 9th month of the year.")
+            } else if (fallMonth === "october") {
+                alert("Despite having the prefix for 8 in it's name, October is the 10th month of the year.")
+            } else if (fallMonth === "november") {
+                alert("Despite having the prefix for 9 in it's name, November is the 11th month of the year.")
+            } else {
+                alert("Come on. You have to try.")
+            }
+        } else if (chosenSeason.toLowerCase() === "winter") {
+            alert("The astronomical months in winter are December, January and February.");
+            var winterMonth = prompt("Pick a winter month.");
+            if (winterMonth.toLowerCase() === "december") {
+                alert("Despite having the prefix for 10 in it's name, December is the 12th month of the year.")
+            } else if (winterMonth.toLowerCase() === "january") {
+                alert("HAPPY NEW YEAR!!! This January the world will be 2020 years old.")
+            } else if (winterMonth.toLowerCase() === "february") {
+                alert("It's cold and short. The only holiday is Valentine's day. I'm upset with you.")
+            } else {
+                alert("I'm not mad. I'm just disappointed.")
+            }
+        } else if (chosenSeason.toLowerCase() === "spring") {
+            alert("The astronomical months in spring are March, April and May");
+            var springMonth = prompt("Pick a spring month.");
+            if (springMonth.toLowerCase() === "march") {
+                alert("March is pretty cool.")
+            } else if (springMonth.toLowerCase() === "april") {
+                alert("April showers blah blah blah.")
+            } else if (springMonth.toLowerCase() === "may") {
+                alert("May the fourth be with you.")
+            } else {
+                alert("It's like... I gave you three options and you decided to ignore me.")
+            }
+        }
+        else {
+            alert("Don't just make up words and expect me to believe it's a season.")
+        }
+    }
+
+    // seasonalAlerts();
+    
+    function measurementConversion() {
+        var firstUnitOfMeasure = prompt("What unit of measurement are you starting with?");
+        var firstUnitOfMeasureAmount = prompt("How many " + firstUnitOfMeasure);
+        var secondUnitOfMeasure = prompt("What do you want to convert " + firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " into?");
+
+        if ((firstUnitOfMeasure.toLowerCase() === "inches") && (secondUnitOfMeasure.toLowerCase() === "feet")) {
+            alert((firstUnitOfMeasureAmount / 12) + " feet");
+        } else if ((firstUnitOfMeasure.toLowerCase() === "feet") && )
+    }
+
+    measurementConversion();
+
+</script>
+</body>
+</html>
