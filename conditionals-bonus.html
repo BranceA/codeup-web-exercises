@@ -6,6 +6,18 @@
 </head>
 <body>
 
+<h1>Distance converter</h1>
+<ul>
+    <lh>Accepted Units of Measure</lh>
+    <li>Inches</li>
+    <li>Feet</li>
+    <li>Miles</li>
+    <li>Light Years</li>
+    <li>Millimeters</li>
+    <li>Centimeters</li>
+    <li>Meters</li>
+    <li>Kilometers</li>
+</ul>
 
 <script>
     function makeJustinMessage(name) {
@@ -170,7 +182,15 @@
         var firstUnitOfMeasureAmount = prompt("How many " + firstUnitOfMeasure);
         var secondUnitOfMeasure = prompt("What do you want to convert " + firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " into?");
 
-        if (firstUnitOfMeasure.toLowerCase() === "inches") {
+        if (firstUnitOfMeasure.toLowerCase() === "meters") {
+            var numberOfMeters = firstUnitOfMeasureAmount;
+        } else if (firstUnitOfMeasure.toLowerCase() === "millimeters") {
+            var numberOfMeters = (firstUnitOfMeasureAmount / 1000);
+        } else if (firstUnitOfMeasure.toLowerCase() === "centimeters") {
+            var numberOfMeters = (firstUnitOfMeasureAmount / 100);
+        } else if (firstUnitOfMeasure.toLowerCase() === "kilometers") {
+            var numberOfMeters = (firstUnitOfMeasureAmount * 1000);
+        } else if (firstUnitOfMeasure.toLowerCase() === "inches") {
             var numberOfInches = firstUnitOfMeasureAmount;
         } else if (firstUnitOfMeasure.toLowerCase() === "feet") {
             var numberOfInches = (firstUnitOfMeasureAmount * 12);
@@ -182,18 +202,66 @@
             alert("Oops. Something went wrong.")
         }
 
-        if (secondUnitOfMeasure.toLowerCase() === "inches") {
-            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + numberOfInches + " " + secondUnitOfMeasure);
-        } else if (secondUnitOfMeasure.toLowerCase() === "feet") {
-            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 12) + " " + secondUnitOfMeasure);
-        } else if (secondUnitOfMeasure.toLowerCase() === "miles") {
-            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 63360) + " " + secondUnitOfMeasure);
-        } else if (secondUnitOfMeasure.toLowerCase() === "light years") {
-            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 3.725e+17) + " " + secondUnitOfMeasure);
+        if (((firstUnitOfMeasure.toLowerCase()).indexOf("meter") !== -1) && ((secondUnitOfMeasure.toLowerCase()).indexOf("meter") === -1)) {
+            if (secondUnitOfMeasure.toLowerCase() === "inches") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters * 39.37) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "feet") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters * 3.281) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "miles") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters / 1609.344) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "light years") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters / 9.461e+15) + " " + secondUnitOfMeasure);
+                return "we did it"
+            }
+        } else if (((firstUnitOfMeasure.toLowerCase()).indexOf("meter") !== -1) && ((secondUnitOfMeasure.toLowerCase()).indexOf("meter") !== -1)) {
+            if (secondUnitOfMeasure.toLowerCase() === "meters") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + numberOfMeters + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "millimeters") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters * 1000) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "centimeters") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters * 100) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "kilometers") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfMeters / 1000) + " " + secondUnitOfMeasure);
+                return "we did it"
+            }
+        } else if (((firstUnitOfMeasure.toLowerCase()).indexOf("meter") === -1) && ((secondUnitOfMeasure.toLowerCase()).indexOf("meter") !== -1)) {
+            if (secondUnitOfMeasure.toLowerCase() === "meters") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 39.37) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "millimeters") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches * 25.4) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "centimeters") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches * 2.54) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "kilometers") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 39370.079) + " " + secondUnitOfMeasure);
+                return "we did it"
+            }
+        } else if (((firstUnitOfMeasure.toLowerCase()).indexOf("meter") === -1) && ((secondUnitOfMeasure.toLowerCase()).indexOf("meter") === -1)) {
+            if (secondUnitOfMeasure.toLowerCase() === "inches") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + numberOfInches + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "feet") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 12) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "miles") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 63360) + " " + secondUnitOfMeasure);
+                return "we did it"
+            } else if (secondUnitOfMeasure.toLowerCase() === "light years") {
+                alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 3.725e+17) + " " + secondUnitOfMeasure);
+                return "we did it"
         } else {
             alert("Oops. Something went wrong.");
         }
-    }
+
+    }}
 
     measurementConversion();
 
