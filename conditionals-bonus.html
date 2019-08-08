@@ -170,18 +170,29 @@
         var firstUnitOfMeasureAmount = prompt("How many " + firstUnitOfMeasure);
         var secondUnitOfMeasure = prompt("What do you want to convert " + firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " into?");
 
-        if ((firstUnitOfMeasure.toLowerCase() === "inches") && (secondUnitOfMeasure.toLowerCase() === "feet")) {
-            alert((firstUnitOfMeasureAmount / 12) + " feet");
-        } else if ((firstUnitOfMeasure.toLowerCase() === "feet") && (secondUnitOfMeasure.toLowerCase() === "inches")) {
-            alert((firstUnitOfMeasureAmount * 12) + " inches");
-        } else if ((firstUnitOfMeasure.toLowerCase() === "feet") && (secondUnitOfMeasure.toLowerCase() === "miles")) {
-            alert((firstUnitOfMeasureAmount / 5280) + " miles");
-        } else if ((firstUnitOfMeasure.toLowerCase() === "miles") && (secondUnitOfMeasure.toLowerCase() === "feet")) {
-            alert((firstUnitOfMeasureAmount * 5280) + " feet");
-        } else if ((firstUnitOfMeasure.toLowerCase() === "miles") && (secondUnitOfMeasure.toLowerCase() === "light years")) {
-            alert((firstUnitOfMeasureAmount / 5.879e+12) + " light years");
-        } else if ((firstUnitOfMeasure.toLowerCase() === "light years") && (secondUnitOfMeasure.toLowerCase() === "miles")) {
-            alert((firstUnitOfMeasureAmount * 5.879e+12) + " miles");
+        if (firstUnitOfMeasure.toLowerCase() === "inches") {
+            var numberOfInches = firstUnitOfMeasureAmount;
+        } else if (firstUnitOfMeasure.toLowerCase() === "feet") {
+            var numberOfInches = (firstUnitOfMeasureAmount * 12);
+        } else if (firstUnitOfMeasure.toLowerCase() === "miles") {
+            var numberOfInches = (firstUnitOfMeasureAmount * 63360);
+        } else if (firstUnitOfMeasure.toLowerCase() === "light years") {
+            var numberOfInches = (firstUnitOfMeasureAmount * 3.725e+17);
+        } else {
+            alert("Oops. Something went wrong.")
+        }
+
+        if (secondUnitOfMeasure.toLowerCase() === "inches") {
+            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + numberOfInches + " " + secondUnitOfMeasure);
+        } else if (secondUnitOfMeasure.toLowerCase() === "feet") {
+            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 12) + " " + secondUnitOfMeasure);
+        } else if (secondUnitOfMeasure.toLowerCase() === "miles") {
+            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 63360) + " " + secondUnitOfMeasure);
+        } else if (secondUnitOfMeasure.toLowerCase() === "light years") {
+            alert(firstUnitOfMeasureAmount + " " + firstUnitOfMeasure + " converts into " + (numberOfInches / 3.725e+17) + " " + secondUnitOfMeasure);
+        } else {
+            alert("Oops. Something went wrong.");
+        }
     }
 
     measurementConversion();
