@@ -30,3 +30,13 @@ function concatNumbers(num5) {
 }
 
 concatNumbers();
+
+var input;
+
+function numberMinusFive(input) {
+    for (input = 100; input >= 5; input -= 5) {
+        console.log(input);
+    }
+}
+
+numberMinusFive();
