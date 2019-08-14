@@ -37,8 +37,28 @@
     //
     // console.log(planetsArrayBreaks);
 
-    var planetStringWithBreakTags = "Mercury <br> Venus <br> Earth <br> Mars <br> Juperiter <br> Saturn <br> Uranus <br> Neptune <br> Pluto"
+    var planetStringWithBreakTags = planetsArray.join("<br>");
 
     console.log(planetStringWithBreakTags);
+
+    var planetList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li><li>Pluto</li></ul>";
+
+    console.log(planetList);
+
+    // planetsArray.push("</ul>");
+    // planetsArray.unshift("<ul>");
+    // var planetList = planetsArray.join("</li><li>");
+    // var betterPlanetList = <ul>
+    // console.log(planetList);
+
+    // var addOpeningTag = planetsArray.unshift("<ul>");
+        // var addClosingTag = addOpeningTag
+        // var addListItemTags = addClosingTag.join("<li>");
+
+    // var planetsInList = planetsArray.unshift("<ul>").push("</ul>").join("<li>");
+
+    // console.log(planetsInList);
+    //
+    // console.log(addListItemTags);
 
 })();
