@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARRAYS AND OBJECTS BONUSES!!!!</title>
+</head>
+<body>
+
+
+<script>
+
+    function filterNumbers(array) {
+        var newArray = [];
+        array.forEach(function (element) {
+            if (!isNaN(parseFloat(element))) {
+                newArray.push(parseFloat(element));
+            }
+        });
+
+        console.log(newArray.sort());
+    }
+
+    var arrayOfDogs = [
+        {
+            name: "Chompers",
+            breed: "Pug",
+            age: 7
+        },
+        {
+            name: "Freddy",
+            breed: "Lab",
+            age: 4
+        },
+        {
+            name: "Mr. Pig",
+            breed: "Mastif",
+            age: 10
+        }
+    ];
+    
+    function getOlder(array) {
+        array.forEach(function (dogObject) {
+            dogObject.age = (parseFloat(dogObject.age) + 1);
+        })
+    }
+
+    var arrayOfCars = [
+        {
+            make: 'Volvo',
+            color: 'red',
+            year: 1996,
+            isDirty: true
+        },
+        {
+            make: 'Toyota',
+            color: 'black',
+            year: 2004,
+            isDirty: false
+        },
+        {
+            make: 'Ford',
+            color: 'white',
+            year: 2007,
+            isDirty: true
+        }
+    ];
+
+    function washCars(array) {
+        array.forEach(function (carObject) {
+            carObject.isDirty = false;
+        })
+    }
+
+    var arrayOfAdmins = [
+        {
+            isAdmin: true,
+            email: 'user1@email.com'
+        },
+        {
+            isAdmin: true,
+            email: 'user2@email.com'
+        },
+        {
+            isAdmin: false,
+            email: 'user3@email.com'
+        }
+    ];
+
+    // function adminList(array) {
+    //     var verifiedAdmin = [];
+    //     array.forEach(function (possibleAdmin) {
+    //         if (possibleAdmin.isAdmin === true) {
+    //             verifiedAdmin.push(possibleAdmin.email);
+    //         }
+    //     });
+    //
+    //     console.log(verifiedAdmin);
+    // }
+
+    function adminList(array) {
+        var verifiedAdmin = [];
+        array.forEach(function (possibleAdmin) {
+            if (possibleAdmin.isAdmin === true) {
+                verifiedAdmin.push(possibleAdmin);
+            }
+        });
+
+        console.log(verifiedAdmin);
+    }
+
+    adminList(arrayOfAdmins);
+
+    var arrayOfBreads  = [
+        "white",
+        "wheat",
+        "rhy",
+        "white"
+    ];
+
+    var arrayOfFillings = [
+        "pb&j",
+        "ham",
+        "cheese steak",
+        "tuna"
+    ];
+
+    function makeSandwichObjects(breads, fillings) {
+        var breadObjects = [];
+        for (i = 0; i < breads.length; i++) {
+            breadObjects.push({
+                bread: (breads [i]),
+                filling: (fillings [i])
+            });
+        }
+
+        console.log(breadObjects);
+    }
+
+    makeSandwichObjects(arrayOfBreads, arrayOfFillings);
+
+</script>
+
+</body>
+</html>
