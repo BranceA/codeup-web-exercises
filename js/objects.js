@@ -143,7 +143,11 @@
      *      ...
      */
 
-    books.listInfo
+    books.forEach(function (book) {
+        console.log("Book #" + (books.indexOf(book) + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+    });
 
     /**
      * Bonus:
@@ -155,5 +159,20 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(bookTitle, bookAuthorFirstName, bookAuthorLastName) {
+        var bookStuff = {
+            title: bookTitle,
+            author: {
+                firstName: bookAuthorFirstName,
+                lastName: bookAuthorLastName
+            }
+        };
+        books.push(bookStuff);
+        console.log(books);
+        return bookStuff;
+    }
+
+    createBook("Fear and Loathing in Las Vegas", "Hunter", "Thompson");
 
 })();
