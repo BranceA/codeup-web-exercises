@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>52 Functions</title>
+</head>
+<body>
+
+<script>
+
+    function isNumeric(input) {
+        if (typeof input !== "boolean") {
+            return !isNaN(input);
+        } else {
+            return false
+        }
+    }
+    
+    function isEqual(input1, input2) {
+        return input1 == input2;
+    }
+    
+    function isIdentical(input1, input2) {
+        return input1 === input2
+    }
+
+    function not(input) {
+        return !input
+    }
+
+    function isOdd(number) {
+        return ((number % 2) === 1)
+    }
+
+    function isEven(number) {
+        return ((number % 2) === 0)
+    }
+
+    function isPositive(input) {
+        if (isNumeric(input)) {
+            return input > 0
+        } else {
+            return false
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>
