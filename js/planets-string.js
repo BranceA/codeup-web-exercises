@@ -13,7 +13,7 @@
 
     // console.log(planetsArray);
 
-    var planetsArray = planetsString.split("|");
+    planetsArray = planetsString.split("|");
     console.log(planetsArray);
 
 
@@ -28,37 +28,17 @@
      * string, and <li> tags around each planet.
      */
 
-    // var planet;
-    //
-    // var planetsArrayBreaks = planetsArray.forEach(function(planet) {
-    //     planetsArray.splice(planetsArray.indexOf(planet), 1, "\n planet \n");
-    //     return planetsArrayBreaks
-    // });
-    //
-    // console.log(planetsArrayBreaks);
 
     var planetStringWithBreakTags = planetsArray.join("<br>");
 
     console.log(planetStringWithBreakTags);
 
-    var planetList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li><li>Pluto</li></ul>";
+
+    var planetList = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
 
     console.log(planetList);
 
-    // planetsArray.push("</ul>");
-    // planetsArray.unshift("<ul>");
-    // var planetList = planetsArray.join("</li><li>");
-    // var betterPlanetList = <ul>
-    // console.log(planetList);
+    document.write(planetList);
 
-    // var addOpeningTag = planetsArray.unshift("<ul>");
-        // var addClosingTag = addOpeningTag
-        // var addListItemTags = addClosingTag.join("<li>");
-
-    // var planetsInList = planetsArray.unshift("<ul>").push("</ul>").join("<li>");
-
-    // console.log(planetsInList);
-    //
-    // console.log(addListItemTags);
 
 })();
