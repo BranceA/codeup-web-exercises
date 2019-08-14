@@ -80,6 +80,44 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books = [
+        {
+            title: "Dirk Gently's Holistic Detective Agency",
+            author: {
+                firstName: "Douglas",
+                lastName: "Adams"
+            }
+        },
+        {
+            title: "Words of Radiance",
+            author: {
+                firstName: "Brandon",
+                lastName: "Sanderson"
+            }
+        },
+        {
+            title: "The Name of the Wind",
+            author: {
+                firstName: "Patrick",
+                lastName: "Rothfuss"
+            }
+        },
+        {
+            title: "The Winds of Winter",
+            author: {
+                firstName: "Nobody",
+                lastName: "Apparently"
+            }
+        },
+        {
+            title: "Fool Moon",
+            author: {
+                firstName: "Jim",
+                lastName: "Butcher"
+            }
+        }
+    ];
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -104,6 +142,8 @@
      *      ---
      *      ...
      */
+
+    books.listInfo
 
     /**
      * Bonus:
