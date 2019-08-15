@@ -15,18 +15,25 @@
             return area; // TODO: return the proper value
         },
 
+        getCircumference: function () {
+            var circumference = 2 * Math.PI * this.radius;
+            return circumference;
+        },
+
         logInfo: function (doRounding) {
             if (doRounding === true) {
-                var area = Math.round(circle.getArea());
+                var area = Math.round(this.getArea());
+                var circumference = Math.round(this.getCircumference());
             } else {
-                var area = circle.getArea();
+                var area = this.getArea();
+                var circumference = this.getCircumference()
             }
             // TODO: complete this method.
 
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
 
-            console.log("Area of a circle with radius: " + this.radius + ", is: " + area);
+            console.log("Area of a circle with radius: " + this.radius + ", is: " + area + ". The circumference is " + circumference);
         }
     };
 
