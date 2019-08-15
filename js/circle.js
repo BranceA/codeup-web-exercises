@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    var names = ["Tim", "Bob", "Sarah", "Bertha", "Jim", "Bart", "Sally", "Juan", "Doug", "Patty", "David", "Steven", "Erika", "Gertrude", "Nemo", "Harry", "Larry", "Mo", "Heather", "Brance Jr."];
+    var names = ["Tim", "Bob", "Jane", "Bertha", "Jim", "Bart", "Sally", "Juan", "Doug", "Patty", "David", "Steven", "Erika", "Gertrude", "Nemo", "Harry", "Larry", "Mo", "Heather", "Brance Jr."];
 
     // create a circle object
     var circle = {
