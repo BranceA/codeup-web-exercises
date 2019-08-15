@@ -31,7 +31,7 @@
     };
 
     // log info about the circle
-    console.log("This is a circle. It's name is " + names[Math.floor(Math.random() * 21)] + ". It has a radius of " + circle.radius + ".");
+    console.log("This is a circle. It's name is " + names[Math.floor(Math.random() * 20)] + ". It has a radius of " + circle.radius + ".");
     circle.logInfo(false);
     console.log("Circle area rounded to the nearest whole number");
     circle.logInfo(true);
@@ -40,7 +40,7 @@
     // TODO: Change the radius of the circle to 5.
     circle.radius = 5;
     // log info about the circle
-    console.log("This is a circle. It's name is " + names[Math.floor(Math.random() * 21)] + ". It has a radius of " + circle.radius + ".");
+    console.log("This is a circle. It's name is " + names[Math.floor(Math.random() * 20)] + ". It has a radius of " + circle.radius + ".");
     circle.logInfo(false);
     console.log("Circle area rounded to the nearest whole number");
     circle.logInfo(true);
