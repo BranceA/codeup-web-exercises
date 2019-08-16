@@ -7,6 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="header-button">Change some text.</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +15,10 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button id="every-other-li-btn">Change every other item's color.</button>
+<button id="dbid-1-btn">Change Item 1 color.</button>
 <h2 id="sub-header">Hello Again.</h2>
+<button id="sub-header-button">Change some text color.</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -33,27 +37,56 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = "JavaScript is Cool";
+        var headerListener = function(event) {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        };
+
+        document.getElementById('header-button').addEventListener('click', headerListener, false);
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
 
+        var subHeaderListener = function(event) {
         subHeader.style.color = 'blue';
+        };
+
+        document.getElementById('sub-header-button').addEventListener("click", subHeaderListener, false);
+
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
 
-        for (var i = 0; i < listItems.length; i++) {
-            if (listItems[i].getAttribute('data-dbid') == 1) {
-                listItems[i].style.color = 'blue';
-            } else if (i % 2 === 0) {
-                listItems[i].style.color = 'grey';
+        // for (var i = 0; i < listItems.length; i++) {
+        //     if (listItems[i].getAttribute('data-dbid') == 1) {
+        //         listItems[i].style.color = 'blue';
+        //     } else if (i % 2 === 0) {
+        //         listItems[i].style.color = 'grey';
+        //     }
+        // }
+
+        var everyOtherLi = function(event) {
+            for (var i = 0; i < listItems.length; i++) {
+                if (i % 2 === 0) {
+                    listItems[i].style.color = 'grey';
+                        }
             }
-        }
+        };
+
+        var itemOne = function(event) {
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i].getAttribute('data-dbid') == 1) {
+                    listItems[i].style.color = 'blue';
+                }
+            }
+        };
+
+        document.getElementById('every-other-li-btn').addEventListener("click", everyOtherLi, false);
+        document.getElementById('dbid-1-btn').addEventListener("click", itemOne, false);
 
         // TODO: Set text color of li with dbid = 1 to blue
 
