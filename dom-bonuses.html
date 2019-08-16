@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Bonuses</title>
+</head>
+<body>
+
+
+<script>
+
+    function groceryList() {
+        var makingList = ["<ul>", "</ul>"];
+        for (i = 1; i <= 5; i++) {
+            var newListItem = prompt("What do you need to get at the store?");
+            var addElementTags = "<li>" + newListItem + "</li>";
+            makingList.pop();
+            makingList.push(addElementTags);
+            makingList.push("</ul>");
+        }
+        console.log(makingList);
+        document.write(makingList.join(" "));
+    }
+
+    groceryList();
+
+
+
+</script>
+
+</body>
+</html>
