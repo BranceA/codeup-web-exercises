@@ -5,13 +5,29 @@
     <title>Title</title>
 </head>
 <body>
+<h1 class="top" id="big-header">Generic Header</h1>
+<p class="top" id="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet assumenda at cum doloremque eius et eveniet iste iusto laboriosam laudantium, mollitia nam, odio perferendis perspiciatis sed sequi veniam voluptates?</p>
+<h3 class="bottom" id="smaller-header">List of things</h3>
+<ul id="the-list" class="bottom">
+    <li class="codeup" id="me-1">Museum</li>
+    <li class="codeup" id="me-2">Sky</li>
+    <li class="codeup" id="me-3">Finland</li>
+    <li class="codeup" id="me-4">Duck</li>
+    <li class="codeup" id="me-5">80s Hair Metal</li>
+</ul>
 
+<div class="box" id="box"></div>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
+    "use strict";
+
     $(document).ready(function () {
-        alert('The DOM has finished loading!')
-    });
+    $('li').css('font-size', '20px');
+    $('h1, p, li').css('background-color', 'yellow');
+    var hOneContents = $('#big-header').html();
+    alert(hOneContents);
+});
 </script>
 </body>
 </html>
