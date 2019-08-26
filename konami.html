@@ -11,7 +11,7 @@
 <body>
 <h1>Konami Code</h1>
 <div id="priest"></div>
-<audio id="pop">
+<audio id="pop" onended="clearImage()">
     <source src="sounds/wololo.mp3" type="audio/mpeg">
 </audio>
 
@@ -24,11 +24,23 @@
 
     $(function(){
         $(window).jKonamicode(function(){
-            $('body').css('background-color', 'red');
-            $('#pop')[0].play();
-            $("div").html('<img src="img/red-priest.jpg" alt="red-priest">');
+            if (whatColor === 'blue') {
+                $('body').css('background-color', 'red');
+                $('#pop')[0].play();
+                $("div").html('<img src="img/red-priest.jpg" alt="red-priest">');
+                whatColor = 'red';
+            } else if (whatColor === 'red') {
+                $('body').css('background-color', 'blue');
+                $('#pop')[0].play();
+                $("div").html('<img src="img/blue-priest.jpg" alt="red-priest">');
+                whatColor = 'blue';
+            }
         });
     });
+
+    function clearImage() {
+        $("div").html("")
+    }
 
 </script>
 </body>
