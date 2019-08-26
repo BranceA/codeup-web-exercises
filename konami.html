@@ -2,20 +2,31 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
 <h1>Konami Code</h1>
+<div id="priest"></div>
+<audio id="pop">
+    <source src="sounds/wololo.mp3" type="audio/mpeg">
+</audio>
 
 <script src="js/jquery-2.2.4.js"></script>
 <script src="//cdn.jsdelivr.net/gh/Leoche/jKonamiCode@1.0.0/jKonamiCode.js" type="text/javascript"></script>
 
 <script>
     "use strict";
-
+    var whatColor = 'blue';
 
     $(function(){
         $(window).jKonamicode(function(){
-            alert("Hello World!");
+            $('body').css('background-color', 'red');
+            $('#pop')[0].play();
+            $("div").html('<img src="img/red-priest.jpg" alt="red-priest">');
         });
     });
 
