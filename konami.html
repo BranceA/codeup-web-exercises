@@ -2,12 +2,15 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: blue;
         }
         h1 {
             height: 10vh;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
         }
         div {
             height: 60vh;
@@ -21,7 +24,7 @@
     </style>
 </head>
 <body>
-<h1>Konami Code</h1>
+<h1>Age of Empires priest simulator</h1>
 <div id="priest"></div>
 <audio id="pop" onended="clearImage()">
     <source src="sounds/wololo.mp3" type="audio/mpeg">
@@ -39,7 +42,7 @@
             if (whatColor === 'blue') {
                 $('body').css('background-color', 'red');
                 $('#pop')[0].play();
-                $("div").html('<img src="img/red-priest.jpg" alt="red-priest">');
+                $("div").html('<img src="img/red-priest.png" alt="red-priest">');
                 whatColor = 'red';
             } else if (whatColor === 'red') {
                 $('body').css('background-color', 'blue');
