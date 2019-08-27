@@ -38,7 +38,6 @@
         <dd class="invisible">You know what? Sure. Mazel Tov.</dd>
     </dl>
 
-    <ul>
         <h3>Redwood</h3>
             <ul>
                 <li>Birthplace of Julius Caesar.</li>
@@ -46,8 +45,6 @@
                 <li>Winner of Time Magazine's sexiest park in 2004</li>
                 <li>Gravity prevents human flight here.</li>
             </ul>
-    </ul>
-    <ul>
         <h3>Yellowstone</h3>
             <ul>
                 <li>Birthplace of the Xtreme water fountain.</li>
@@ -55,8 +52,6 @@
                 <li>Scientists have concluded that this is not the location of the Holy Grail.</li>
                 <li>Lifeforms in Yellowstone are exclusively carbon based.</li>
             </ul>
-    </ul>
-    <ul>
         <h3>Travis Park</h3>
             <ul>
                 <li>Natural habitat of Ceres when on a break.</li>
@@ -64,8 +59,7 @@
                 <li>Park rangers are actually bike cops.</li>
                 <li>Named after this one dude Travis.</li>
             </ul>
-    </ul>
-
+    <button>I DO THINGS!!!</button>
     <script src="js/jquery-2.2.4.js"></script>
     <script>
         $("h1").click(function () {
@@ -75,6 +69,23 @@
         $("dt").click(function () {
            $(this).toggleClass("highlight")
         });
+
+        $("button").click(function () {
+            console.log("This works");
+            $('ul').each(function(index) {
+                $(this).children().last().css("background-color", "yellow");
+            });
+        });
+
+        $("h3").click(function () {
+            $(this).next().children().css("font-weight", "bold");
+        });
+
+        $("li").click(function () {
+           $(this).parent().children().first().css("color", "blue");
+        });
+
+
     </script>
 </body>
 </html>
