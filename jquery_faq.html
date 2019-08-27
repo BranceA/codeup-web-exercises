@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>National Parks</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: hotpink;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <h1>10 most common questions about national parks.</h1>
+    <dl>
+        <dt>Is it true that elves live in our national parks?</dt>
+        <dd class="invisible">Yes. We have a nonaggression pact with them so don't pick any fights.</dd>
+        <dt>What is the bear status of our national parks?</dt>
+        <dd class="invisible">Serious</dd>
+        <dt>Are any of our national parks a wildlife preserve for the chupacabra?</dt>
+        <dd class="invisible">Some parks are wildlife preserves. Some of those have chupacabras. We don't want to talk about it.</dd>
+        <dt>Are our parks prepared for a Viking attack?</dt>
+        <dd class="invisible">Our defences from the days of yore have been maintained for centuries. We feel fully prepared for the 7th Viking War.</dd>
+        <dt>Can the moon be turned into a national park?</dt>
+        <dd class="invisible">We're trying.</dd>
+        <dt>Can we convert any national parks into strip malls?</dt>
+        <dd class="invisible">No. We still have a nonaggression pact with the elves.</dd>
+        <dt>Can I have my daughter's quinceanera at a national park?</dt>
+        <dd class="invisible">You can but I wouldn't recommend it if you want to have a healthy relationship with her.</dd>
+        <dt>Wedding?</dt>
+        <dd class="invisible">I guess. Nothing is stopping you.</dd>
+        <dt>What about my cat's Bar Mitzvah?</dt>
+        <dd class="invisible">...does your cat need a Bar Mitzvah?</dd>
+        <dt>Yes.</dt>
+        <dd class="invisible">You know what? Sure. Mazel Tov.</dd>
+    </dl>
+
+    <script src="js/jquery-2.2.4.js"></script>
+    <script>
+        $("h1").click(function () {
+            $('dd').toggleClass("invisible")
+        });
+
+        $("dt").click(function () {
+           $(this).toggleClass("highlight")
+        });
+    </script>
 </body>
 </html>
