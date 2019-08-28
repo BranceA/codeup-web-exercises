@@ -11,9 +11,41 @@
         .highlight {
             background-color: hotpink;
         }
+        #shenanigan {
+            height: 100vh;
+            width: 100vw;
+            z-index: 5;
+            font-size: 16em;
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #shenanigan p {
+            display: inline-block;
+        }
+
+        #shenanigan div {
+            height: 440px;
+            width: 600px;
+            background-image: url("img/speech-bubble.png");
+            background-size: cover;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
+    <div id="shenanigan">
+        <p>h2</p>
+        <div><p>Will you register for our site?</p></div>
+    </div>
+    <div>
+        <h1>Would you like to sign up for our newsletter? <span id="the-x">X</span></h1>
+    </div>
     <h1>10 most common questions about national parks.</h1>
     <dl>
         <dt>Is it true that elves live in our national parks?</dt>
@@ -67,6 +99,13 @@
 
     <script src="js/jquery-2.2.4.js"></script>
     <script>
+
+        $("#shenanigan").hide();
+
+        setTimeout(function () {
+            $("#shenanigan").fadeIn();
+        }, 8000);
+
         $("h1").click(function () {
             $('dd').toggleClass("invisible")
         });
@@ -82,13 +121,21 @@
             });
         });
 
+        $("h3").next().hide();
+
         $("h3").click(function () {
             $(this).next().children().css("font-weight", "bold");
+            $(this).next().toggle();
         });
 
         $("li").click(function () {
            $(this).parent().children().first().css("color", "blue");
         });
+
+        $("#the-x").click(function () {
+            $(this).parent().parent().hide();
+        });
+
 
     </script>
 </body>
