@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1></h1>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+
+    $.ajax("https://swapi.co/api/films", {
+        "type": "GET",
+        "data": {
+            "search": "A New Hope"
+        }
+    }).done(function(data) {
+
+        $.ajax("https://hookb.in/RZzDrJpM6EtaLaj8Wp0K", data).done(function (data) {
+
+                console.log(data.results[0].director);
+            });
+
+        console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+    });
+
+
+        // $.ajax("https://hookb.in/RZzDrJpM6EtaLaj8Wp0K").done(function (data) {
+        // var settings = {
+        //     method: "POST",
+        //     data: {
+        //         q: "Silly Cats",
+        //         order: "ascending",
+        //         limit: 10
+        //     }
+        // };
+        //     console.log(settings.data.order);
+        // });
+
+
+
+    // var inputtedNumber =
+    //
+    // $.ajax()
+    //
+    // $.ajax("https://swapi.co/api/films").done(function (data) {
+    //     console.log(data.results);
+    //     for (var i = 0; i < data.results.length; i++)
+    //     console.log(data.results[i].title);
+    // })
+</script>
+</body>
+</html>
