@@ -1,0 +1,19 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#day-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: green;
+}
+
+#day-2 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: blue;
+}
+
+#day-3 {
+    grid-area: 1 / 3 / 2 / 4;
+    background-color: pink;
+}
