@@ -122,19 +122,13 @@ $(document).ready(function () {
                 }
             };
 
-            $("#day-1").html("<p>" + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</p><p><img src='" + findTheIcon(nameOfIconOne) + "'></p><p>" + data.daily.data[0].summary + "</p><p>" + data.daily.data[0].humidity + "</p><p>" + data.daily.data[0].windSpeed + "</p><p>" + data.daily.data[0].pressure + "</p>");
-            $("#day-2").html("<p>" + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</p><p><img src='" + findTheIcon(nameOfIconTwo) + "'></p><p>" + data.daily.data[1].summary + "</p><p>" + data.daily.data[1].humidity + "</p><p>" + data.daily.data[1].windSpeed + "</p><p>" + data.daily.data[1].pressure + "</p>");
-            $("#day-3").html("<p>" + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</p><p><img src='" + findTheIcon(nameOfIconThree) + "'></p><p>" + data.daily.data[2].summary + "</p><p>" + data.daily.data[2].humidity + "</p><p>" + data.daily.data[2].windSpeed + "</p><p>" + data.daily.data[2].pressure + "</p>");
+            $("#day-1").html("<p>High/Low" + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</p><p><img src='" + findTheIcon(nameOfIconOne) + "'></p><p>" + data.daily.data[0].summary + "</p><p>" + data.daily.data[0].humidity + "</p><p>" + data.daily.data[0].windSpeed + "</p><p>" + data.daily.data[0].pressure + "</p>");
+            $("#day-2").html("<p>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</p><p><img src='" + findTheIcon(nameOfIconTwo) + "'></p><p>" + data.daily.data[1].summary + "</p><p>" + data.daily.data[1].humidity + "</p><p>" + data.daily.data[1].windSpeed + "</p><p>" + data.daily.data[1].pressure + "</p>");
+            $("#day-3").html("<p>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</p><p><img src='" + findTheIcon(nameOfIconThree) + "'></p><p>" + data.daily.data[2].summary + "</p><p>" + data.daily.data[2].humidity + "</p><p>" + data.daily.data[2].windSpeed + "</p><p>" + data.daily.data[2].pressure + "</p>");
         })
     });
 
     marker.on('dragend', onDragEnd);
-
-    var geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-    });
-
-    map.addControl(geocoder);
 
     var coordinatesGeocoder = function (query) {
 // match anything which looks like a decimal degrees coordinate pair
@@ -184,7 +178,7 @@ $(document).ready(function () {
         accessToken: mapboxgl.accessToken,
         localGeocoder: coordinatesGeocoder,
         zoom: 4,
-        placeholder: "Try: -40, 170",
+        placeholder: "Try: -40, 170 or a name",
     }));
 
 
