@@ -68,10 +68,19 @@ $(document).ready(function () {
                 }
             }
         };
+        // reverseGeocode({lng: 29.4241, lat: -98.4936}, mapboxToken).then(function (value) {
+        //
+        // })
+        //
+        // geocode(marker.location, mapboxToken).then(function() {
+        //     console.log(marker.location);
+        // });
 
-        $("#day-1").html("<li>High/Low: " + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + '</li><li><img src="' + findTheIcon(nameOfIconOne) + '"></li><li>' + data.daily.data[0].summary + "</li><li>" + data.daily.data[0].humidity + "</li><li>" + data.daily.data[0].windSpeed + "</li><li>" + data.daily.data[0].pressure + "</li>");
-        $("#day-2").html("<li>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li>" + data.daily.data[1].summary + "</li><li>" + data.daily.data[1].humidity + "</li><li>" + data.daily.data[1].windSpeed + "</li><li>" + data.daily.data[1].pressure + "</li>");
-        $("#day-3").html("<li>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconThree) + "'></li><li>" + data.daily.data[2].summary + "</li><li>" + data.daily.data[2].humidity + "</li><li>" + data.daily.data[2].windSpeed + "</li><li>" + data.daily.data[2].pressure + "</li>");
+        console.log(reverseGeocode({lng: -157.8060, lat: 21.2620}, mapboxToken));
+
+        $("#day-1").html("<li class='list-group-item'>High/Low: " + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconOne) + "'></li><li class='list-group-item'>" + data.daily.data[0].summary + "</li><li class='list-group-item'>" + data.daily.data[0].humidity + "</li><li class='list-group-item'>" + data.daily.data[0].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[0].pressure + "</li>");
+        $("#day-2").html("<li class='list-group-item'>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li class='list-group-item'>" + data.daily.data[1].summary + "</li><li class='list-group-item'>" + data.daily.data[1].humidity + "</li><li class='list-group-item'>" + data.daily.data[1].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[1].pressure + "</li>");
+        $("#day-3").html("<li class='list-group-item'>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconThree) + "'></li><li class='list-group-item'>" + data.daily.data[2].summary + "</li><li class='list-group-item'>" + data.daily.data[2].humidity + "</li><li class='list-group-item'>" + data.daily.data[2].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[2].pressure + "</li>");
     });
 
     function onDragEnd() {
@@ -96,9 +105,9 @@ $(document).ready(function () {
                 }
             };
 
-            $("#day-1").html("<li>High/Low: " + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconOne) + "'></li><li>" + data.daily.data[0].summary + "</li><li>" + data.daily.data[0].humidity + "</li><li>" + data.daily.data[0].windSpeed + "</li><li>" + data.daily.data[0].pressure + "</li>");
-            $("#day-2").html("<li>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li>" + data.daily.data[1].summary + "</li><li>" + data.daily.data[1].humidity + "</li><li>" + data.daily.data[1].windSpeed + "</li><li>" + data.daily.data[1].pressure + "</li>");
-            $("#day-3").html("<li>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconThree) + "'></li><li>" + data.daily.data[2].summary + "</li><li>" + data.daily.data[2].humidity + "</li><li>" + data.daily.data[2].windSpeed + "</li><li>" + data.daily.data[2].pressure + "</li>");
+            $("#day-1").html("<li class='list-group-item'>High/Low: " + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconOne) + "'></li><li class='list-group-item'>" + data.daily.data[0].summary + "</li><li class='list-group-item'>" + data.daily.data[0].humidity + "</li><li class='list-group-item'>" + data.daily.data[0].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[0].pressure + "</li>");
+            $("#day-2").html("<li class='list-group-item'>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li class='list-group-item'>" + data.daily.data[1].summary + "</li><li class='list-group-item'>" + data.daily.data[1].humidity + "</li><li class='list-group-item'>" + data.daily.data[1].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[1].pressure + "</li>");
+            $("#day-3").html("<li class='list-group-item'>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconThree) + "'></li><li class='list-group-item'>" + data.daily.data[2].summary + "</li><li class='list-group-item'>" + data.daily.data[2].humidity + "</li><li class='list-group-item'>" + data.daily.data[2].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[2].pressure + "</li>");
         })
     };
 
@@ -122,9 +131,9 @@ $(document).ready(function () {
                 }
             };
 
-            $("#day-1").html("<li>High/LowHigh: /Low" + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconOne) + "'></li><li>" + data.daily.data[0].summary + "</li><li>" + data.daily.data[0].humidity + "</li><li>" + data.daily.data[0].windSpeed + "</li><li>" + data.daily.data[0].pressure + "</li>");
-            $("#day-2").html("<li>High/LowHigh: /Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li>" + data.daily.data[1].summary + "</li><li>" + data.daily.data[1].humidity + "</li><li>" + data.daily.data[1].windSpeed + "</li><li>" + data.daily.data[1].pressure + "</li>");
-            $("#day-3").html("<li>High/LowHigh: /Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconThree) + "'></li><li>" + data.daily.data[2].summary + "</li><li>" + data.daily.data[2].humidity + "</li><li>" + data.daily.data[2].windSpeed + "</li><li>" + data.daily.data[2].pressure + "</li>");
+            $("#day-1").html("<li class='list-group-item'>High/LowHigh: /Low" + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconOne) + "'></li><li class='list-group-item'>" + data.daily.data[0].summary + "</li><li class='list-group-item'>" + data.daily.data[0].humidity + "</li><li class='list-group-item'>" + data.daily.data[0].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[0].pressure + "</li>");
+            $("#day-2").html("<li class='list-group-item'>High/LowHigh: /Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li class='list-group-item'>" + data.daily.data[1].summary + "</li><li class='list-group-item'>" + data.daily.data[1].humidity + "</li><li class='list-group-item'>" + data.daily.data[1].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[1].pressure + "</li>");
+            $("#day-3").html("<li class='list-group-item'>High/LowHigh: /Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconThree) + "'></li><li class='list-group-item'>" + data.daily.data[2].summary + "</li><li class='list-group-item'>" + data.daily.data[2].humidity + "</li><li class='list-group-item'>" + data.daily.data[2].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[2].pressure + "</li>");
         })
     });
 
@@ -205,9 +214,9 @@ $(document).ready(function () {
                 }
             };
 
-            $("#day-1").html("<li>High/Low: " + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconOne) + "'></li><li>" + data.daily.data[0].summary + "</li><li>" + data.daily.data[0].humidity + "</li><li>" + data.daily.data[0].windSpeed + "</li><li>" + data.daily.data[0].pressure + "</li>");
-            $("#day-2").html("<li>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li>" + data.daily.data[1].summary + "</li><li>" + data.daily.data[1].humidity + "</li><li>" + data.daily.data[1].windSpeed + "</li><li>" + data.daily.data[1].pressure + "</li>");
-            $("#day-3").html("<li>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li><img src='" + findTheIcon(nameOfIconThree) + "'></li><li>" + data.daily.data[2].summary + "</li><li>" + data.daily.data[2].humidity + "</li><li>" + data.daily.data[2].windSpeed + "</li><li>" + data.daily.data[2].pressure + "</li>");
+            $("#day-1").html("<li class='list-group-item'>High/Low: " + data.daily.data[0].apparentTemperatureLow + "/" + data.daily.data[0].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconOne) + "'></li><li class='list-group-item'>" + data.daily.data[0].summary + "</li><li class='list-group-item'>" + data.daily.data[0].humidity + "</li><li class='list-group-item'>" + data.daily.data[0].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[0].pressure + "</li>");
+            $("#day-2").html("<li class='list-group-item'>High/Low: " + data.daily.data[1].apparentTemperatureLow + "/" + data.daily.data[1].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconTwo) + "'></li><li class='list-group-item'>" + data.daily.data[1].summary + "</li><li class='list-group-item'>" + data.daily.data[1].humidity + "</li><li class='list-group-item'>" + data.daily.data[1].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[1].pressure + "</li>");
+            $("#day-3").html("<li class='list-group-item'>High/Low: " + data.daily.data[2].apparentTemperatureLow + "/" + data.daily.data[2].apparentTemperatureHigh + "</li><li class='list-group-item'><img src='" + findTheIcon(nameOfIconThree) + "'></li><li class='list-group-item'>" + data.daily.data[2].summary + "</li><li class='list-group-item'>" + data.daily.data[2].humidity + "</li><li class='list-group-item'>" + data.daily.data[2].windSpeed + "</li><li class='list-group-item'>" + data.daily.data[2].pressure + "</li>");
         });
     });
 
