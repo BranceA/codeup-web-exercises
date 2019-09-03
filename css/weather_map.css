@@ -34,3 +34,7 @@ main {
     border-radius: 3px;
     display: none;
 }
+
+ul {
+    list-style-type: none;
+}
