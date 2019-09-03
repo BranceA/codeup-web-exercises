@@ -194,6 +194,8 @@ $(document).ready(function () {
 
     map.addControl(new mapboxgl.NavigationControl());
 
+    map.scrollZoom.disable();
+
     map.on("moveend", function() {
         marker.setLngLat(map.getCenter());
         var lngLat = marker.getLngLat();
