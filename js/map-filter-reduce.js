@@ -46,4 +46,5 @@ let totalExperience = users.reduce((total, user) => {return total + user.yearsOf
 
 let longestEmail = users.reduce((currentLongest, user) => {return (user.email.length > currentLongest.length) ? user.email : currentLongest}, " ");
 
-let allTheUsers = users.reduce((total, user) => total + ` ${user.name}`, `Your instructors are: `);
+let allTheUsers = users.reduce((total, user) => total + ` ${user.name},`, `Your instructors are: `);
+
