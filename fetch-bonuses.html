@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch Bonuses</title>
+</head>
+<body>
+<h1>Fetch Bonuses</h1>
+<label for="username">PUT IN YOUR USERNAME!!!</label>
+<input type="text" id="username">
+<button type="submit" id="change-the-color">SUBMIT IT!!!</button>
+
+<script>
+
+    document.getElementById("change-the-color").addEventListener("click", function (e) {
+        e.preventDefault();
+        let checkThisText = document.getElementById("username").value;
+        document.getElementById("username").value = '';
+        fetch(`data/profiles.json`).then(response => {
+            return response.json()
+        }).then(user => {
+            console.log(user);
+        })
+    });
+
+
+
+</script>
+</body>
+</html>
